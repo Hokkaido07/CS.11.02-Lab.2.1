@@ -1,4 +1,4 @@
-# CS.11.02-Lab.2.1
+ # CS.11.02-Lab.2.1
 
 Your task is to implement all of the methods described below in a class called Main.
 You should pass all of the tests in the MainTest class (provided).

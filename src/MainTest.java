@@ -13,7 +13,7 @@ class MainTest {
 
     @org.junit.jupiter.api.Test
     void addTwo() {
-        assertEquals(24, Main.add(5,7,6,6));
+        assertEquals(24, Main.addTwo(5,7,6,6));
     }
 
     @org.junit.jupiter.api.Test
