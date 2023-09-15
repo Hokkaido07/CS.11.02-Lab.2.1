@@ -1,4 +1,6 @@
+import java.math.RoundingMode;
 import java.util.Scanner;
+import java.math.BigDecimal;
 
 /*
     This is Y11 CS Lab 2.1 which is learning how to use methods.
@@ -65,6 +67,7 @@ public class Main {
                 System.out.println("Your negative decimal rounds to: " + roundNegativeValueToNearestInteger(negativeDecimalToRound));
             }
         }
+        System.out.println("Your negative decimal rounds to: " + roundNegativeValueToNearestInteger(negativeDecimalToRound));
 
     }
 
@@ -80,12 +83,12 @@ public class Main {
 
     // 3. morningGreeting method
     public static String morningGreeting(String name){
-        return "Good Morning " + name + "!";
+        return "早上好, " + name + "!";
     }
 
     // 4. afternoonGreeting method
     public static String afternoonGreeting(String name){
-        return "Good Morning " + name + "!";
+        return "下午好, " + name + "!";
     }
 
     // 5. triple method
@@ -100,12 +103,14 @@ public class Main {
 
     // 7. roundPositiveValueToNearestInteger method
     public static int roundPositiveValueToNearestInteger(double originalDecimal){
-        return (int) originalDecimal;
+        return (int) Math.round(originalDecimal);
     }
 
     // 8. roundNegativeValueToNearestInteger method
     public static int roundNegativeValueToNearestInteger(double originalNegativeDecimal){
-        return (int) originalNegativeDecimal;
+        BigDecimal bigDecimal = BigDecimal.valueOf(originalNegativeDecimal);
+        bigDecimal = bigDecimal.setScale(0, RoundingMode.HALF_UP);
+        return bigDecimal.intValue();
     }
 
 }
