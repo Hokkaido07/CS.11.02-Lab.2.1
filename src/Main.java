@@ -37,7 +37,7 @@ public class Main {
         System.out.println("Enter a fourth number: ");
         num4 = scanner.nextInt();
         scanner.nextLine();
-        addTwoResult = addTwo(num1, num2, num3, num4);
+        addTwoResult = add(num1, num2, num3, num4);
         System.out.println(num1 + "+" + num2 + "+" + num3 + "+" + num4 + " = "  + addTwoResult);
         //Prompts for name
         System.out.println("\nEnter your name: ");
@@ -77,8 +77,8 @@ public class Main {
     }
     
     // 2. adding four numbers method
-    public static int addTwo(int num1, int num2, int num3, int num4){
-        return num1 + num2 + num3 + num4;
+    public static int add(int num1, int num2, int num3, int num4){
+        return add(num1, num2) + add (num3, num4);
     }
 
     // 3. morningGreeting method
